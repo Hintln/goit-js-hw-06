@@ -1,3 +1,11 @@
+// Напиши скрипт, який для кожного елемента масиву ingredients:
+
+// Створить окремий елемент <li>. Обов'язково використовуй метод document.createElement().
+// Додасть назву інгредієнта як його текстовий вміст.
+// Додасть елементу клас item.
+// Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
+
+
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -6,3 +14,14 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+
+const ingredientsListEL = document.querySelector("#ingredients");
+
+const ingredientList = document.createElement('li')
+for (const ingredient of ingredients) {
+  const ingredientList = document.createElement('li')
+  ingredientList.textContent = ingredient;
+  ingredientsListEL.appendChild(ingredientList, ingredientsListEL.firstElementChild);
+
+}
