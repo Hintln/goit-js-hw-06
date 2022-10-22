@@ -22,6 +22,7 @@ const ingredientList = document.createElement('li')
 for (const ingredient of ingredients) {
   const ingredientList = document.createElement('li')
   ingredientList.textContent = ingredient;
+  ingredientList.classList.add('item');
   ingredientsListEL.appendChild(ingredientList, ingredientsListEL.firstElementChild);
 
 }
