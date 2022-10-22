@@ -7,3 +7,9 @@
 
 
 const listItem = document.querySelectorAll('.item');
+console.log(`Число категорій: ${listItem.length}`);
+
+listItem.forEach((item) => {
+    console.log(`Категорія: ${item.firstElementChild.textContent}`);
+    console.log(`Кількість елементів: ${item.lastElementChild.children.length}`);
+});
