@@ -29,3 +29,10 @@ height = "250"
 </li>`);
 
 galleryELem.insertAdjacentHTML('beforeend', elements.join(''));
+galleryELem.style.cssText = `displey: flex;
+align-items: center;
+justify-content: space-between;
+list-style-type: none;
+margin: 50px 50px;
+padding: 0;
+`;
