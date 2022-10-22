@@ -14,5 +14,3 @@ const counterValue = {
         this.value -= 1;
     }
 }
-
-
