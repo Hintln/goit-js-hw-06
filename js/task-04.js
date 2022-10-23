@@ -17,4 +17,10 @@ const counterValue = {
 
 const incrementBtm = document.querySelector('button[data-action = "increment"]');
 const decrementBtm = document.querySelector('button[data-action = "decrement"]');
+const valueEl = document.querySelector('span');
+
+incrementBtm.addEventListener('click', function () {
+    counterValue.increment();
+    valueEl.textContent = counterValue.value
+})
 
