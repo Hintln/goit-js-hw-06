@@ -6,8 +6,31 @@
 
 
 
-const input = document.querySelector('#validation-input');
+const inputEl = document.querySelector('#validation-input');
 
-input.addEventListener('blur', checkLength);
 
+inputEl.addEventListener('blur', check)
+
+
+function check(evt) {
+    console.log(evt)
+    if (evt.currentTarget.value.length === inputEl.getAttribute('data-length')) {
+        
+    } else {
+        inputEl.classList.remove('valid')
+        inputEl.classList.add('invalid')
+    }
+}
+
+
+// function checkLength(evt) {
+//     console.log(evt)
+    
+//     if (evt.currentTarget.value.length ===inputEl.getAttribute('data-length')) {
+//         inputEl.classlist.add('valid');
+//     } else{
+//             inputEl.classlist.remove('valid')
+//             inputEl.classlist.add('invalid')
+//         }
+//     }
 
