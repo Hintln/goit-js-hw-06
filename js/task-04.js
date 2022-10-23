@@ -14,3 +14,7 @@ const counterValue = {
         this.value -= 1;
     }
 }
+
+const incrementBtm = document.querySelector('button[data-action = "increment"]');
+const decrementBtm = document.querySelector('button[data-action = "decrement"]');
+
