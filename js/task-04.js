@@ -24,3 +24,7 @@ incrementBtm.addEventListener('click', function () {
     valueEl.textContent = counterValue.value
 })
 
+decrementBtm.addEventListener('click', function () {
+    counterValue.decrement();
+    valueEl.textContent = counterValue.value
+})
