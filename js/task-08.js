@@ -8,3 +8,8 @@ const inputEmail = document.querySelector('[name = "email"]');
 const inputForm = document.querySelector('.loging-form');
 const inputAcces = documetn.querySelector('[name = "passsword"]');
 
+inputForm.addEventListener('submit', SubForm)
+
+function SubForm(event) {
+    
+}
