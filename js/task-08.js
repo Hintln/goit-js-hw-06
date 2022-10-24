@@ -1,15 +1,26 @@
 // Обробка відправлення форми form.login-form повинна відбуватися відповідно до події submit.
 // Під час відправлення форми сторінка не повинна перезавантажуватися.
 // Якщо у формі є незаповнені поля, виводь alert з попередженням про те, що всі поля повинні бути заповнені.
-// Якщо користувач заповнив усі поля і відправив форму, збери значення полів в об'єкт, де ім'я поля буде ім'ям властивості, а значення поля - значенням властивості. Для доступу до елементів форми використовуй властивість elements.
+// Якщо користувач заповнив усі поля і відправив форму, збери значення полів в об'єкт, де ім'я поля буде ім'ям властивості, а значення поля - значенням властивості. 
+// Для доступу до елементів форми використовуй властивість elements.
 // Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
 
-const inputEmail = document.querySelector('[name = "email"]');
-const inputForm = document.querySelector('.loging-form');
-const inputAcces = documetn.querySelector('[name = "passsword"]');
+const inputEmail = document.querySelector('[name="email"]');
+const inputAcces = document.querySelector('[name="password"]');
+const inputForm = document.querySelector('.login-form');
 
-inputForm.addEventListener('submit', SubForm)
+inputForm.addEventListener('submit',subForm)
 
-function SubForm(event) {
-    
+function subForm(event) {
+    event.preventDefault()
+    if (inputEmail.value === '' || inputAcces.value === '')
+    {alert('Всі поля повинні бути заповнені')}
+    else {
+        const email = event.currentTarget.elements.email.value;
+        const acces = event.currentTarget.elements.password.value;
+        console.log({ email, acces });
+
+
+        event.currentTarget.reset()
+    }
 }   
