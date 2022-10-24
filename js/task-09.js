@@ -9,3 +9,16 @@ function getRandomHexColor() {
 }
 
 
+const backgroundColor = document.querySelector('body');
+const changeColorBtm = document.querySelector('.change-color');
+const textColor = document.querySelector('.color');
+
+
+changeColorBtm.addEventListener('click', changeColor)
+
+function changeColor() {
+  textColor.textContent = getRandomHexColor()
+  backgroundColor.style.background = `${getRandomHexColor()}`
+
+}
+console.log(getRandomHexColor())
