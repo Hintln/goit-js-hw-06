@@ -12,4 +12,4 @@ inputForm.addEventListener('submit', SubForm)
 
 function SubForm(event) {
     
-}
+}   
