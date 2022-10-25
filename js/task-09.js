@@ -12,7 +12,8 @@ function getRandomHexColor() {
 const backgroundColor = document.querySelector('body');
 const changeColorBtm = document.querySelector('.change-color');
 const textColor = document.querySelector('.color');
-
+const color = getRandomHexColor()
+document.body.setAttribute('style', `background-color: ${color}`)
 
 changeColorBtm.addEventListener('click', changeColor)
 
@@ -22,3 +23,4 @@ function changeColor() {
 
 }
 console.log(getRandomHexColor())
+
