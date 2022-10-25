@@ -23,7 +23,7 @@ const images = [
 const galleryELem = document.querySelector('.gallery');
 
 const elements = images.map((image) => `<li>
-<img src = ${image.url} alt = ${image.alt}
+<img src = "${image.url}" alt = "${image.alt}"
 width = "400"
 height = "250" 
 </li>`);
