@@ -21,4 +21,4 @@ buttonRef.addEventListener('click', (e) => {
   bodyRef.style.backgroundColor = spanRef.textContent;
 });
 
-
+console.log(getRandomHexColor)
