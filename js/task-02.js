@@ -18,11 +18,11 @@ const ingredients = [
 
 const ingredientsListEL = document.querySelector("#ingredients");
 
-const ingredientList = document.createElement('li')
-for (const ingredient of ingredients) {
-  const ingredientList = document.createElement('li')
-  ingredientList.textContent = ingredient;
-  ingredientList.classList.add('item');
-  ingredientsListEL.appendChild(ingredientList, ingredientsListEL.firstElementChild);
+const createMarkUp = ingredients.map(item => {
+    const ingredient = document.createElement('li')
+    ingredient.textContent = `${item}`
+    ingredient.classList.add('item')
+    return ingredient
+});
 
-}
+ingredientsListEL.append(...createMarkUp)
